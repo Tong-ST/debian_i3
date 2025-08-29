@@ -133,7 +133,7 @@ basically you've to added download source first before you can `sudo apt install
     sudo apt install lightdm
     sudo cp -r configs/lightdm/* /etc/lightdm/
     ```
-    (OPTIONAL) Below step ONLY for **Multi-monitor** setup add **custom script** to lightdm
+    (**OPTIONAL & UNSTABLE** for only people who know what is it doing, I will find the better way and update later) Below step ONLY for **Multi-monitor** setup add **custom script** to lightdm
     
     In `sudo nano /etc/lightdm/lightdm.conf` GO and **Uncomment** line below [Seat:*] `display-setup-script` then in debian_i3 folder copy *my script* file to /etc/script by command below
     ```
