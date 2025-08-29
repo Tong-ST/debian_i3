@@ -153,6 +153,34 @@ basically you've to added download source first before you can `sudo apt install
 - Change wallpaper just in `sudo nano ~/.config/i3/config` line that exec `feh` go and change new path to your img
 - Want Darkmode? The easy way would be ``` sudo apt install lxappearance ``` get some theme from gnome-look.org install on like ``` /usr/share/themes ```
 - Eye-care you can add `exec_always --no-startup-id redshift -l LAT:LON` to i3 config, Adjust LAT:LON to your location to get it just go to google maps, right click on your location lat:long will appear first
+- Personalize Firefox see [textfox](https://github.com/adriankarlen/textfox) for theming guide can also use configs from mine![textfox_firefox_theme](assets/debian_textfox.png)
+
+## NOTED FOR ME
+- Problem with my Device can't use `network-manager`, So I can connect using `iwconfig`
+    - Activate wifi interface, `<device_name>` like: *wlp3s0* see in `ip link`
+        ```
+        sudo ip link set <device_name> up 
+        ```
+    - (OPTION 1) Connect to WEP network
+        ```
+        sudo iwconfig <device_name> essid "WLAN_NAME" key s:WLAN_PASSWORD
+        ```
+    - (OPTION 2) Connect to WPA/WPA2 network (most likely for me)
+        ```
+        sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+        ```
+        Add to that file
+        ```
+        network={
+            ssid="wifi_name"
+            psk="wifi_key"
+        }
+        ```
+        Then connect using:
+        ```
+        sudo wpa_supplicant -B -i <device_name> -c /etc/wpa_supplicant/wpa_supplicant.conf
+        ``` 
+
 
 ## References
 - [Debian - i3 wiki](https://wiki.debian.org/i3)
