@@ -25,6 +25,6 @@ if echo "$current_outputs" | grep -qw "$monitor_primary" && echo "$current_outpu
 	# Set position
 	xrandr --output $monitor_primary --right-of $monitor_secondary
 else
-	echo "Monitor setup not reconized check monitor name in 'xrandr' command"
+	echo "Monitor setup not recognized check monitor name in 'xrandr' command"
 fi
 
