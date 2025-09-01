@@ -70,6 +70,9 @@ bindsym $mod+t exec $file
 # Keyboard switch
 # exec --no-startup-id setxkbmap -model pc104 -layout us,th -option grp:ctrl_space_toggle
 
+# Run Swap Caps_lock with Right_Ctrl
+#exec --no-startup-id xmodmap ~/.Xmodmap
+
 # 
 # kill focused window
 bindsym $mod+Shift+w kill

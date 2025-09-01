@@ -182,7 +182,8 @@ basically you've to added download source first before you can `sudo apt install
         ```
         sudo wpa_supplicant -B -i <device_name> -c /etc/wpa_supplicant/wpa_supplicant.conf
         ``` 
-
+- Swap Caps_lock with Right_ctrl
+    - Using Xmodmap just `cp /configs/others_configs/.Xmodmap ~/` And Uncomment in i3 config  
 
 ## References
 - [Debian - i3 wiki](https://wiki.debian.org/i3)
